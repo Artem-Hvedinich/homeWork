@@ -14,7 +14,7 @@ function App() {
     const messageData: Array<messagePropsType> = [
         {
             avatar: 'https://cdn4.iconfinder.com/data/icons/hacker-1/500/hacker-hack-crime-cyber_2-512.png',
-            name: 'Max Hved',
+            name: 'Artem Hved',
             message: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, dis dapibus primis augue cursus dui, ',
             time: '22:00',
         }
