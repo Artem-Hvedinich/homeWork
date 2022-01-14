@@ -2,11 +2,20 @@ import React from 'react'
 import s from "./Message.module.css"
 
 export type messagePropsType = {
-    avatar: any,
+    avatar: string,
     name: string,
     message: string,
     time: string,
 }
+
+export const messageData: Array<messagePropsType> = [
+    {
+        avatar: 'https://cdn4.iconfinder.com/data/icons/hacker-1/500/hacker-hack-crime-cyber_2-512.png',
+        name: 'Artem Hved',
+        message: 'Lorem ipsum dolor sit amet consectetur adipiscing elit, dis dapibus primis augue cursus dui, ',
+        time: '22:00',
+    }
+]
 
 const Message = (props: messagePropsType) => {
     return (
