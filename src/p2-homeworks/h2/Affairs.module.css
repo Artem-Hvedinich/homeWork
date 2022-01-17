@@ -1,3 +1,18 @@
-.someClass {
-
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
 }
+
+.button {
+    background-color: rgba(3, 114, 129, 0.36);
+    border-radius: 7px;
+    width: 23px;
+}
+
+.button1 {
+    background-color: rgba(140, 182, 196, 0.34);
+    border-radius: 5px;
+    margin: 2px;
+}
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
-
+import s from './Affairs.module.css'
 type AffairsPropsType = { // need to fix any
     data: Array<AffairType>
     setFilter: (filter: FilterType) => void
@@ -27,10 +27,10 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <button onClick={setAll} className={s.button1}>All</button>
+            <button onClick={setHigh}className={s.button1}>High</button>
+            <button onClick={setMiddle}className={s.button1}>Middle</button>
+            <button onClick={setLow} className={s.button1}>Low</button>
         </div>
     )
 }
