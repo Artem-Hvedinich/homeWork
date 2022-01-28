@@ -5,7 +5,7 @@ type GreetingPropsType = {
     name: string // need to fix any
     setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void // need to fix any
     addUser: () => void // need to fix any
-    error: string // need to fix any
+    error: boolean // need to fix any
     totalUsers: number // need to fix any
 }
 
@@ -18,11 +18,13 @@ const Greeting: React.FC<GreetingPropsType> = (
     const onKeyPressAddUser = (e: KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && addUser()
 
     return (
-        <div className={s.mainClass}>
-            <input value={name} onChange={setNameCallback} className={inputClass} onKeyPress={onKeyPressAddUser}/>
-            <span className={s.errorMessage}>{error}</span>
-            <button onClick={addUser} className={s.buttonClass}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.main}>
+            <div className={s.mainClass}>
+                <input value={name} onChange={setNameCallback} className={inputClass} onKeyPress={onKeyPressAddUser}/>
+                <button onClick={addUser} className={s.buttonClass}>add</button>
+                <div>{totalUsers}</div>
+            </div>
+            <div className={s.errorMessage}>{error && <div>Enter valid name</div>}</div>
         </div>
     )
 }
