@@ -1,5 +1,7 @@
 .App {
     display: flex;
-    align-items: start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    background-image: url("https://www.zastavki.com/pictures/1920x1080/2015/Backgrounds_Blue_green_gradient_107697_23.png") ;
 }
