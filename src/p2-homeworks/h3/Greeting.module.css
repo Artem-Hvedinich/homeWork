@@ -13,7 +13,9 @@
 
 /*button style*/
 .buttonClass {
-    height: 1.5em;
+    display: flex;
+    border-radius: 7px;
+    height: 25px;
     z-index: 1;
     position: relative;
     font-size: inherit;
@@ -21,11 +23,13 @@
     color: white;
     outline: none;
     border: none;
-    background-color: hsl(236, 32%, 26%);
+    background-color: hsl(237, 22%, 39%);
 }
 
 .buttonClass::before {
-    height: 1.5em;
+    display: flex;
+    border-radius: 7px;
+    height: 25px;
     content: '';
     z-index: -1;
     position: absolute;
