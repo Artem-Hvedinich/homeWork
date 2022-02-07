@@ -11,9 +11,46 @@
     justify-content: space-between;
 }
 
+/*button style*/
 .buttonClass {
-    background-color: #037281;
-    color: rgba(255, 255, 255, 0.74);
+    height: 1.5em;
+    z-index: 1;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: hsl(236, 32%, 26%);
+}
+
+.buttonClass::before {
+    height: 1.5em;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #367909;
+    transform-origin: center bottom;
+    transform: scaleY(0);
+    transition: transform 0.25s ease-in-out;
+}
+
+.buttonClass:hover {
+    cursor: pointer;
+}
+
+.buttonClass:hover::before {
+    transform-origin: center top;
+    transform: scaleY(1);
+}
+
+/*style for input*/
+.p {
+    position: relative;
 }
 
 .error {
@@ -30,11 +67,6 @@
 
 .errorMessage {
     color: red;
-}
-
-/*style for input*/
-.p {
-    position: relative;
 }
 
 .trueClass {
@@ -62,7 +94,7 @@
 .right,
 .left {
     position: absolute;
-    background-color: #265a9d;
+    background-color: #367909;
     transition: transform 0.5s ease;
 }
 
