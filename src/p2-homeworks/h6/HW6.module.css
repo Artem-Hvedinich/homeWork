@@ -1,0 +1,39 @@
+.hw6 {
+    margin: 10px;
+}
+
+.spanClassName {
+    display: inline-block;
+    color: rgba(66, 255, 66, 0.66);
+    height: 29px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+}
+
+/**/
+.boxClass{
+    display: flex;
+}
+
+.box {
+    perspective: 100px;
+    margin-right: 10px;
+}
+
+.coin {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(66, 255, 66, 0.42);
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotateY(540deg);
+    }
+}
