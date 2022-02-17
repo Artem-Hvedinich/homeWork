@@ -1,13 +1,11 @@
 .hw6 {
     margin: 10px;
 }
-
 .spanClassName {
     display: inline-block;
     color: rgba(66, 255, 66, 0.66);
-    height: 29px;
+    height: 34px;
 }
-
 .button {
     display: flex;
     justify-content: space-between;
