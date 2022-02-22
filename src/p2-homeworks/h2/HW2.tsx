@@ -54,11 +54,12 @@ function HW2() {
 
             {/*should work (должно работать)*/}
             <div className={s.item}>
-            <Affairs
-                data={filteredAffairs}
-                setFilter={setFilter}
-                deleteAffairCallback={deleteAffairCallback}
-            />
+                <Affairs
+                    data={filteredAffairs}
+                    setFilter={setFilter}
+                    deleteAffairCallback={deleteAffairCallback}
+                    filter={filter}
+                />
             </div>
             <hr/>
             {/*для личного творчества, могу проверить*/}

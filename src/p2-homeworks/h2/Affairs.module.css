@@ -11,7 +11,12 @@
     justify-content: space-between;
 }
 
-.button1 {
+.active {
+    background-color: hsla(121, 91%, 46%, 0.51);
+}
+
+.button1,
+.active {
     border-radius: 10px;
     width: 70px;
     height: 30px;
@@ -24,12 +29,16 @@
     color: white;
     outline: none;
     border: none;
-    background-color: hsl(236, 32%, 26%);
     overflow: hidden;
     cursor: pointer;
 }
 
-.button1::after {
+.button1 {
+    background-color: hsl(236, 32%, 26%);
+}
+
+.button1::after,
+.active::after {
     content: '';
     z-index: -1;
     background-color: hsla(120, 100%, 63%, 0.42);
@@ -40,7 +49,8 @@
     transform: translate3d(-525%, 0, 0) rotate(35deg);
 }
 
-.button1:hover::after {
+.button1:hover::after,
+.active:hover::after {
     transition: transform 0.45s ease-in-out;
     transform: translate3d(200%, 0, 0) rotate(35deg);
 }
