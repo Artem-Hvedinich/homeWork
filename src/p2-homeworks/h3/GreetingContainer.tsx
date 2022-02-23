@@ -2,6 +2,7 @@ import React, {useState, ChangeEvent} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
 import s from "./Greeting.module.css";
+import {isNumber} from "util";
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any

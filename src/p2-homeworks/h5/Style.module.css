@@ -2,6 +2,10 @@
     min-height: 1000px;
 }
 
+.p1{
+    padding: 10px;
+}
+
 .style {
     display: flex;
     justify-content: space-around;

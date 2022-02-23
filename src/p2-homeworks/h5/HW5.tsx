@@ -10,7 +10,7 @@ function HW5() {
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
                 <Header/>
-                <Routesing/>
+                <div className={s.p1}><Routesing/></div>
             </HashRouter>
         </div>
     )
