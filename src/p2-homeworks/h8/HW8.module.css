@@ -1,0 +1,14 @@
+.final_people {
+    display: flex;
+    justify-content: space-between;
+    width: 12rem;
+    padding-left: 1rem;
+    color: #e3e2e2;
+    font-size: 16px;
+}
+
+.button_style{
+    display: flex;
+    justify-content: space-around;
+    width: 15rem;
+}
