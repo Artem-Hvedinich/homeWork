@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 80px;
+}
+
+.time, .data {
+    color: white;
+}
+
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
