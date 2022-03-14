@@ -1,0 +1,19 @@
+.boxContainer {
+    margin-left: 43px;
+    width: 30px;
+    height: 30px;
+}
+
+.coin {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid rgba(66, 255, 66, 0.42);
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotateY(530deg);
+    }
+}

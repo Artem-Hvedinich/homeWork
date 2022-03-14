@@ -4,7 +4,7 @@ import s from './Style.module.css'
 
 function Header() {
 
-    const setActive=({isActive}:any) => isActive ? s.active : s.anActive
+    const setActive = ({isActive}: any) => isActive ? s.active : s.anActive
 
     return (
         <nav className={s.style}>
