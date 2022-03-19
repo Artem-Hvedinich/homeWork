@@ -3,9 +3,12 @@ import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
-
+    const [valueMin, setValueMin] = useState(0)
+    const [valueMax, setValueMax] = useState(100)
+    const valueMinHandler = (valueMin <= valueMax) ? valueMin : 50
+    const numberContentMin = (valueMin <= valueMax) ? valueMin : 'No valid Range'
+    const valueMaxHandler = (valueMin <= valueMax) ? valueMax : 50
+    const numberContentMax = (valueMin <= valueMax) ? valueMax : ''
 
     return (
         <div>
@@ -14,17 +17,19 @@ function HW11() {
 
             {/*should work (должно работать)*/}
             <div>
-                <SuperRange onChangeRange={setValue1}
-                            valueMin={value1}
-                            valueMax={value2}
+                <SuperRange onChangeRange={setValueMin}
+                            valueMinHandler={valueMinHandler}
                     // сделать так чтоб value1 изменялось
                 />
             </div>
 
             <div>
-                <SuperDoubleRange onChangeRange={setValue1}
-                                  onChangeRange2={setValue2}
-                                  valueMax={value2} valueMin={value1}
+                <SuperDoubleRange onChangeRange={setValueMin}
+                                  onChangeRange2={setValueMax}
+                                  valueMinHandler={valueMinHandler}
+                                  valueMaxHandler={valueMaxHandler}
+                                  numberContentMin={numberContentMin}
+                                  numberContentMax={numberContentMax}
                     // сделать так чтоб value1 и value2 изменялось
                 />
             </div>
