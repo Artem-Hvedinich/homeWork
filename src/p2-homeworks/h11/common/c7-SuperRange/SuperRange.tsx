@@ -8,14 +8,15 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
+    valueMin: number
+    valueMax: number
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
-        className,
-
+        className, valueMin, valueMax,
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -27,15 +28,23 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
+    const valueMinHandler = (valueMin <= valueMax) ? valueMin : ''
+
     return (
         <>
+            <div className={s.slider}>
+                <div className={s.progress}></div>
+            </div>
+            <span className={s.range_input}>
             <input
                 type={'range'}
                 onChange={onChangeCallback}
                 className={finalRangeClassName}
-
+                value={valueMinHandler}
+                min={'0'} max={'100'}
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
+        </span>
         </>
     )
 }
