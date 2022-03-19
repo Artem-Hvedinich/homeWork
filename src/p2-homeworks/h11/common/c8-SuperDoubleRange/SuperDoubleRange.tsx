@@ -37,8 +37,6 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
-    console.log(valueMinHandler, valueMaxHandler)
-
     return (
         <>
             <div className={s.numberValue}>
