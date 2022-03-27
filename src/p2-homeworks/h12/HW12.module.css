@@ -3,15 +3,15 @@
 }
 
 .dark-text {
-    color: aliceblue;
+    color: dimgrey;
 }
 
 .red {
-    background: lightcoral;
+    background: #e34848;
 }
 
 .red-text {
-    color: aqua;
+    color: lightgreen;
 }
 
 .some {
@@ -19,5 +19,26 @@
 }
 
 .some-text {
-    color: darkslateblue;
+    color: #e34848;
+}
+
+.gold {
+    background: gold;
+}
+
+.gold-text {
+    color: purple;
+}
+
+.purple {
+    background: purple;
+}
+
+.purple-text {
+    color: gold;
+}
+
+.select_block {
+    box-sizing: border-box;
+    padding:10px;
 }

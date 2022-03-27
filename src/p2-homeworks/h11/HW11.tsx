@@ -14,7 +14,6 @@ function HW11() {
         <div>
             <hr/>
             homeworks 11
-
             {/*should work (должно работать)*/}
             <div>
                 <SuperRange onChangeRange={setValueMin}
