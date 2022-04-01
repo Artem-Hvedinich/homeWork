@@ -1,11 +1,15 @@
 select {
     background-color: #c2c2c2;
     width: 85px;
+
 }
 
+.option {
+    background-color: rgba(0, 0, 0, 0.42);
+}
 
 input[type='radio'],
-label{
+label {
     cursor: pointer;
 }
 
@@ -44,4 +48,5 @@ input[type='radio']:checked::after {
     transform: translate(-50%, -50%);
     visibility: visible;
 }
+
 
